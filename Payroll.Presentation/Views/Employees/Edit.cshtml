@@ -1,0 +1,79 @@
+﻿@using Payroll.Domain.Entities
+@using Payroll.Presentation.ViewModel;
+@model EditEmployeeViewModel
+
+<form action="Edit" method="post">
+    <div class="table table-striped">
+        <input hidden asp-asp-for="EmployeeId"
+        <div class="row">
+            <div class="mt-1">
+                <label for="EmployeeNo">EmployeeNo</label>
+                <input asp-for="EmployeeData.EmployeeNo" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="FullName"> FullName</label>
+                <input asp-for="EmployeeData.FullName" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="Gender">Gender</label>
+                <select asp-for="EmployeeData.Gender" class="form-control"
+                        asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option value="">-- Select Gender --</option>
+                </select>
+            </div>
+            <div class="mt-1">
+                <label for="ImageUrl">ImageUrl</label>
+                <input asp-for="EmployeeData.ImageUrl" class="form-control" />
+            </div>
+            <div class="mt-1">
+                <label for="DateOfBirth">Date Of Birth</label>
+                <input asp-for="EmployeeData.DateOfBirth" class="form-control" />
+            </div>
+            <div class="mt-1">
+                <label for="DateOfJoined">Date Of Joining</label>
+                <input asp-for="EmployeeData.DateOfJoined" class="form-control" />
+            </div>
+            <div class="mt-1">
+                <label for="Phone">Phone Number</label>
+                <input asp-for="EmployeeData.Phone" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="Email">Email</label>
+                <input asp-for="EmployeeData.Email" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="Address">Address</label>
+                <input asp-for="EmployeeData.Address" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="City">City</label>
+                <input asp-for="EmployeeData.City" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="PostalCode">City</label>
+                <input asp-for="EmployeeData.PostalCode" type="number" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="Designation">Designation</label>
+                <input asp-for="EmployeeData.Designation" class="form-control">
+            </div>
+            <div class="mt-1">
+                <label for="EmployeeData.PaymentMethod"></label>
+                <select asp-for="EmployeeData.PaymentMethod" class="form-control"
+                        asp-items="Html.GetEnumSelectList<PaymentMethod>()">
+                    <option value="">-- Select Payment Method --</option>
+                </select>
+            </div>
+
+            <div class="mt-1">
+                <label for="StudentLoan"></label>
+                <select asp-for="EmployeeData.StudentLoan" class="form-control"
+                        asp-items="Html.GetEnumSelectList<StudentLoan>()">
+                    <option value="">-- Select Student Loan --</option>
+                </select>
+            </div>
+            <div class="mt-1">
+                <button type="submit" value="Submit" class="btn btn-success w-100">Save!</button>
+            </div>
+        </div>
+</form>

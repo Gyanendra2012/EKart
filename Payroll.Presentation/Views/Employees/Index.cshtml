@@ -1,0 +1,48 @@
+﻿@using Payroll.Presentation.ViewModel
+@model List<EmployeeViewModel>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee No</th>
+            <th>Fulll Name</th>
+            <th>Gender</th>
+            <th>Image Url</th>
+            <th>Date Of Birth</th>
+            <th>Date Of Joining</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Postal Code</th>
+            <th>Designation</th>
+            <th>Payment Method</th>
+            <th>Employee Loan</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var list in Model)
+        {
+            <tr>
+                <td>@list.EmployeeNo</td>
+                <td>@list.FullName</td>
+                <td>@list.Gender</td>
+                <td><img src="@list.ImageUrl" alt="" width="24" height="24"></td>
+                <td>@list.DateOfBirth</td>
+                <td>@list.DateOfJoined</td>
+                <td>@list.Phone</td>
+                <td>@list.Email</td>
+                <td>@list.Address</td>
+                <td>@list.City</td>
+                <td>@list.PostalCode</td>
+                <td>@list.Designation</td>
+                <td>@list.PaymentMethod</td>
+                <td>@list.StudentLoan</td>
+                <td>
+                   
+                    <a class="btn btn-info" asp-action="Edit" asp-controller="Employees" asp-route-Id="@list.Id">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-controller="Employees" asp-route-Id="@list.Id">Delete</a>
+
+                </td>
+        </tr>
+        }
+    </tbody>
+</table>

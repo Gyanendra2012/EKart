@@ -1,0 +1,13 @@
+﻿@using EKart.ViewModels.DegreeProgramViewModels
+@model CreateDegreeProgramViewModel
+<div class="container">
+    <form asp-action="Create" method="post">
+        <div class="row mt-2">
+            <label for="DegreeProgramTitle">Degree Program Title</label>
+            <input asp-for="DegreeProgramTitle" class="form-control" />
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-success w-100" value="submit">Save!</button>
+        </div>
+    </form>
+</div>
