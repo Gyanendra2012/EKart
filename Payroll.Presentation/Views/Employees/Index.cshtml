@@ -23,19 +23,13 @@
         {
             <tr>
                 <td>@list.EmployeeNo</td>
+                <td><img src="@list.ImageUrl" alt="" width="24" height="24"></td>
                 <td>@list.FullName</td>
                 <td>@list.Gender</td>
-                <td><img src="@list.ImageUrl" alt="" width="24" height="24"></td>
-                <td>@list.DateOfBirth</td>
-                <td>@list.DateOfJoined</td>
-                <td>@list.Phone</td>
-                <td>@list.Email</td>
-                <td>@list.Address</td>
-                <td>@list.City</td>
-                <td>@list.PostalCode</td>
                 <td>@list.Designation</td>
-                <td>@list.PaymentMethod</td>
-                <td>@list.StudentLoan</td>
+                <td>@list.City</td>
+                <td>@list.DateOfJoined</td>
+                
                 <td>
                    
                     <a class="btn btn-info" asp-action="Edit" asp-controller="Employees" asp-route-Id="@list.Id">Edit</a>
