@@ -13,7 +13,7 @@ namespace Payroll.Domain.Usecases
         IEnumerable<Employee> GetAllEmployees();
         void AddEmployee(Employee employee);
         void UpdateEmployee(Employee employee);
-        void DeleteEmployee(int id);
+    
         void DeleteEmployee(Employee employee);
     }
 }

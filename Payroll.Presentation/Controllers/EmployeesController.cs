@@ -125,9 +125,9 @@ namespace Payroll.Presentation.Controllers
         }
 
         [HttpGet]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int Id)
         {
-            var employee = _employeeRepo.GetEmployeeById(id);
+            var employee = _employeeRepo.GetEmployeeById(Id);
             if(employee==null)
             {
                 return NotFound();
