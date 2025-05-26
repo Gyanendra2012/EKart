@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Payroll.Presentation.Models;
 using System.Diagnostics;
 
 namespace Payroll.Presentation.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,7 +14,7 @@ namespace Payroll.Presentation.Controllers
         {
             _logger = logger;
         }
-
+        [Authorize(Roles ="Staff")]
         public IActionResult Index()
         {
             return View();

@@ -21,7 +21,7 @@ namespace Payroll.Presentation.Controllers
             foreach (var employee in employees)
             {
                 viewModel.Add(new EmployeeViewModel
-                {  //Id = employee.Id,
+                {   Id = employee.Id,
                     EmployeeNo = employee.EmployeeNo,
                     FullName = employee.FullName,
                     Gender = employee.Gender,
@@ -105,6 +105,7 @@ namespace Payroll.Presentation.Controllers
         {
             var employee = new Employee
             {
+                Id=vm.EmployeeID,
                 EmployeeNo = vm.EmployeeData.EmployeeNo,
                 FullName = vm.EmployeeData.FullName,
                 Gender = vm.EmployeeData.Gender,
